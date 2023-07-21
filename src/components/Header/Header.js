@@ -1,25 +1,32 @@
-import "./Header.scss";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import "./Header.scss";
+
 const Header = () => {
   const [mobile, setMobile] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
-  function closeNav() {
-    setMobile(true);
-  }
-  function openNav() {
-    setMobile(false);
-  }
 
+  const closeNav = () => {
+    setMobile(true);
+  };
+  const openNav = () => {
+    setMobile(false);
+  };
   const handleScroll = () => {
     setIsScrolling(window.scrollY > 0);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
-    <header>
+    <header id="header">
       <nav className={isScrolling ? "activeNav" : ""}>
         <div className="nav_logo">
           <a href="#">
@@ -29,24 +36,48 @@ const Header = () => {
         <div className="nav_items">
           <ul>
             <li>
-              <a href="#" className="active">
+              <Link
+                to="header"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="services"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <a href="#" className="alink">
+                Features
               </a>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#" className="alink">
+                Pricing
+              </a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href="#" className="alink">
+                Testimonials
+              </a>
             </li>
             <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Testimonials</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
+              <a href="#" className="alink">
+                FAQ
+              </a>
             </li>
           </ul>
         </div>
