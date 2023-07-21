@@ -47,8 +47,8 @@ header {
               color: #ffaf10;
             }
           }
-          .activeLink{
-            color:#ffaf10;
+          .activeLink {
+            color: #ffaf10;
           }
         }
       }
@@ -91,6 +91,7 @@ header {
             text-decoration: none;
             color: #595959;
             transition: all 0.4s ease-in-out;
+            cursor: pointer;
             &:hover {
               color: #ffaf10;
             }
@@ -98,7 +99,7 @@ header {
           .active {
             color: black;
           }
-          .activeLink{
+          .activeLink {
             color: #ffaf10;
           }
         }

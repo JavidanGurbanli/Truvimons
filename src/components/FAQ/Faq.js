@@ -46,13 +46,19 @@ const Faq = () => {
         {faqData.map((item, index) => (
           <div key={index} className="faq_item">
             <div className="faq_question" onClick={() => toggleAnswer(index)}>
-              <h4 className={activeIndex === index ? 'activeText' : ''}>{item.question}</h4>
-              <span className={activeIndex === index ? 'activePlus' : ''}>+</span>
+              <h4 className={activeIndex === index ? "activeText" : ""}>
+                {item.question}
+              </h4>
+              <span className={activeIndex === index ? "activePlus" : ""}>
+                +
+              </span>
             </div>
             <div
-              className={`faq-answer ${activeIndex === index ? 'open' : ''}`}
+              className={`faq-answer ${activeIndex === index ? "open" : ""}`}
             >
-              <p style={{ maxHeight: activeIndex === index ? '1000px' : '0' }}>{item.answer}</p>
+              <p style={{ maxHeight: activeIndex === index ? "1000px" : "0" }}>
+                {item.answer}
+              </p>
             </div>
           </div>
         ))}

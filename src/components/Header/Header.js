@@ -60,7 +60,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-            <Link
+              <Link
                 to="features"
                 smooth={true}
                 spy={true}
@@ -72,7 +72,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-            <Link
+              <Link
                 to="pricing"
                 smooth={true}
                 spy={true}
@@ -84,7 +84,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-            <Link
+              <Link
                 to="testimonials"
                 smooth={true}
                 spy={true}
@@ -96,7 +96,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-            <Link
+              <Link
                 to="faq"
                 smooth={true}
                 spy={true}
@@ -118,24 +118,76 @@ const Header = () => {
           />
           <ul>
             <li>
-              <a href="#" className="active">
+              <Link
+                to="header"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">Services</a>
+              <Link
+                to="services"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                Services
+              </Link>
             </li>
             <li>
-              <a href="#">Features</a>
+              <Link
+                to="features"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                Features
+              </Link>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <Link
+                to="pricing"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                Pricing
+              </Link>
             </li>
             <li>
-              <a href="#">Testimonials</a>
+              <Link
+                to="testimonials"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                Testimonials
+              </Link>
             </li>
             <li>
-              <a href="#">FAQ</a>
+              <Link
+                to="faq"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
+                FAQ
+              </Link>
             </li>
           </ul>
         </div>
