@@ -84,9 +84,16 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="alink">
+            <Link
+                to="testimonials"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
                 Testimonials
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="alink">
