@@ -1,0 +1,104 @@
+.faq{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    margin:50px 0;
+    padding: 50px 0;
+    background-color: rgba(41,208,106,.1);
+    h3{
+        font-size: 20px;
+        padding:8px 5px;
+        background-color:#ffaf10;
+        color:white;
+        border-radius: 10px;
+    }
+    h2{
+        color:#222;
+        font-weight: 500;
+        font-size: 34px;
+        text-align: center;
+    }
+    .faq_content{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 60%;
+        .faq_item{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            padding:10px 0 30px 0;
+            width: 100%;
+            border-bottom: 1px solid hsla(0,0%,62.4%,.3);
+            .faq_question{
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                h4{
+                    font-size: 24px;
+                    font-weight: 100;
+                    color:#595959;
+                }
+                .activeText{
+                    color:#036358;
+                }
+                span{
+                    padding: 4px 8px;
+                    width: 30px;
+                    height: 30px;
+                    border:1px solid #595959;
+                    border-radius: 50%;
+                    font-size: 18px;
+                    transition: all 0.4s ease-in-out;
+                }
+                .activePlus{
+                    transform: rotate(-45deg);
+                }
+            }
+            .faq-answer {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.5s ease-in-out;
+                p{
+                    width: 100%;
+                    transition: all 0.5s ease-in-out;
+                    color:#595959;
+                    font-size: 14px;
+                    line-height: 1.8;
+                }
+              }
+              
+              .faq-answer.open {
+                opacity: 1;
+                max-height: 1000px;
+              }
+        }
+    }
+    button{
+        width: 150px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid rgba(3,99,88,.3);
+        border-radius: 10px;
+        font-size: 16px;
+        color:#036358;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            background:linear-gradient(259deg,#00f260,#0575e6);
+            color:white;
+            border: none;
+        }
+    }
+}
+@media only screen and (max-width: 992px){
+    .faq{
+        .faq_content{
+            width: 90%;
+        }
+    }
+}

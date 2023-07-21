@@ -1,3 +1,4 @@
+import Faq from '../components/FAQ/Faq'
 import Features from '../components/Features/Features'
 import Header from '../components/Header/Header'
 import Pricing from '../components/Pricing/Pricing'
@@ -12,6 +13,7 @@ const Home = () => {
         <Features/>
         <Pricing/>
         <Testimonials/>
+        <Faq/>
     </div>
   )
 }

@@ -96,9 +96,16 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="alink">
+            <Link
+                to="faq"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
