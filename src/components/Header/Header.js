@@ -60,9 +60,16 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="alink">
+            <Link
+                to="features"
+                smooth={true}
+                spy={true}
+                className="alink"
+                activeClass="activeLink"
+                offset={-100}
+              >
                 Features
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="alink">
