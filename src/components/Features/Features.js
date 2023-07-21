@@ -10,7 +10,7 @@ import "./Features.scss";
 
 const Features = () => {
   return (
-    <section className="features">
+    <section className="features" id="features">
         <h3>FEATURES</h3>
         <h2>Our Features</h2>
         <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Suspendisse ante arcu, consectetur id nisl eget</p>
